@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %} Ajout User{% endblock title %}
+
+
+{% block content %}
+
+
+<form action=" url_for('ajout_user')" method="POST">
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        {{form.name.label}}
+        {{form.name}}
+    </div>
+    <div class="form-group col-md-6">
+          {{form.username.label}}
+          {{form.username}}
+          <label for="inputPassword4">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        </div>
+    </div>
+    <div class="form-group">
+        {{form.email.label}}
+        {{form.email}}
+    </div>
+    <div class="form-group">
+
+        {{form.phone.label}}
+        {{form.phone}}
+    </div>
+    <div class="form-group">   
+        {{form.website.label}}
+         {{form.website}}
+        </div>
+        <div class="form-group">    
+        {{form.street.label}}
+        {{form.street}}
+    </div>
+    <div class="form-group">
+        {{form.suite.label}}
+        {{form.suite}}
+    </div>
+    <div class="form-group">
+        {{form.city.label}}
+        {{form.city}}
+    </div>
+    <div class="form-group">
+        {{form.zipcode.label}}
+        {{form.zipcode}}
+    </div>
+    <div class="form-group">
+        {{form.lng.label}}
+        {{form.lng}}
+        {{form.lat.label}}
+        {{form.lat}}
+    </div>
+    <div class="form-group">        
+        {{form.name_company.label}}
+        {{form.name_company}}
+    </div>
+    <div class="form-group">
+        {{form.catchPrase.label}}
+        {{form.catchPrase}}
+    </div>
+    <div class="form-group">
+        {{form.bs.label}}
+        {{form.bs}}
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </form>
+
+{% endblock content %}
+
